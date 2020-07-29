@@ -12,16 +12,17 @@
        <?php
               function ubah_huruf($string){
                      //kode di sini
-                     $alpha = "zabcdefghijklmnopqrstuvwxyz";
-                     for ($i = 0; $i < strlen($string); $i++) {
-                            for ($j = 1; $j < strlen($alpha)-1; $j++) {
-                                   if ($string[$i] === $alpha[$j]) {
-                                          $string[$i] = $alpha[$j - 1];
+                     $string1 = $string;
+                     $alpha = ['z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+                     for ($i = 1; $i < strlen($string)+1; $i++) {
+                            for ($j = 1; $j < count($alpha); $j++) {
+                                   if ($string[$i-1] === $alpha[$j-1]) {
+                                          $string1[$i-1] = $alpha[$j];
                                    }
                             }
 
                      }
-                     echo $string, "<br>";
+                     echo $string1, "<br>";
                      }
                      
                      // TEST CASES
